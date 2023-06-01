@@ -27,10 +27,16 @@ final class LoadingViewController: UIViewController {
         let view = UIVisualEffectView()
         view.clipsToBounds = true
         view.effect = blurEffect
-        view.layer.cornerRadius = 12
-        view.contentView.addSubview(loadingIndicatorView)
+        view.layer.cornerRadius = 16
+        view.layer.cornerCurve = .continuous
+        view.contentView.addSubviews(loadingIndicatorView, dismissButton)
         loadingIndicatorView.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+        
+        dismissButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-12)
+            make.centerX.equalToSuperview()
         }
         
         return view
@@ -45,9 +51,17 @@ final class LoadingViewController: UIViewController {
         return view
     }()
     
-//    override func viewWillAppear(_ animated: Bool) {
-//
-//    }
+    private lazy var dismissButton: DefaultButton = {
+        let button = DefaultButton(
+            title: "Batalkan",
+            type: .ghost,
+            size: .small
+        )
+        button.tintColor = .secondaryLabel
+        button.alpha = 0
+        
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +74,8 @@ final class LoadingViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        view.fadeOut { isFinished in
-            if isFinished {
-                super.viewWillDisappear(animated)
-            }
-        }
+        super.viewWillDisappear(animated)
+        view.fadeOut()
     }
 }
 
@@ -76,5 +87,15 @@ extension LoadingViewController {
             make.edges.equalToSuperview()
         }
         loadingIndicatorView.startAnimating()
+        dismissButton.addTarget(self, action: #selector(didTapDismissButton), for: .touchUpInside)
+        perform(#selector(showDismissButton), with: nil, afterDelay: 3.0)
+    }
+    
+    @objc func didTapDismissButton() {
+        self.dismiss(animated: false)
+    }
+    
+    @objc func showDismissButton() {
+        dismissButton.fadeIn()
     }
 }

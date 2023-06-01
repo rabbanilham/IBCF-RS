@@ -11,7 +11,7 @@ final class HomeViewController: UITableViewController {
     
     private let strings = [
         [
-            "Sistem Rekomendasi Item-Based Collaborative Filtering ini dibuat untuk membantu mahasiswa menentukan mata kuliah pilihan yang akan diambil pada semester 5 ke atas. Pilih salah satu action untuk melanjutkan."
+            "Pilih sebuah action untuk melanjutkan."
         ],
         [
             "Mulai",
@@ -35,12 +35,18 @@ final class HomeViewController: UITableViewController {
     private let viewControllers = [
         CheckIDViewController(),
         CheckIDViewController(),
-//        RecommendationResultViewController()
-        SubmissionCompleteViewController()
+        RecommendationResultViewController()
+//        SubmissionCompleteViewController()
+//        SimilarityValueListViewController()
     ]
     
     override func viewDidLoad() {
         makeUI()
+        FBUtilities.shared.getRatings { ratings, error in
+            if let ratings = ratings {
+                print("number of ratings are \(ratings.count)")
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

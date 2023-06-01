@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		38051C8329C71E1900FEA7A5 /* InterestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38051C8229C71E1900FEA7A5 /* InterestSubmissionViewController.swift */; };
 		38051C8529C7487500FEA7A5 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38051C8429C7487500FEA7A5 /* UILabel+Extension.swift */; };
+		381E6A6829FB73790019550B /* FBPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E6A6729FB73790019550B /* FBPerformance.swift */; };
+		381E6A6A29FBAF8E0019550B /* PerformanceResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E6A6929FBAF8E0019550B /* PerformanceResultCell.swift */; };
+		381E6A6C29FBCF660019550B /* ErrorDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E6A6B29FBCF660019550B /* ErrorDetailCell.swift */; };
 		3822F4E929D7E56800429987 /* RecommendationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822F4E829D7E56800429987 /* RecommendationResultViewController.swift */; };
 		3822F4EB29D7E70F00429987 /* RecommendationResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822F4EA29D7E70F00429987 /* RecommendationResultCell.swift */; };
 		3822F4ED29D805D600429987 /* SubmissionCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822F4EC29D805D600429987 /* SubmissionCompleteViewController.swift */; };
@@ -18,15 +21,19 @@
 		3827B70629D4008C002CF466 /* FBCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3827B70529D4008C002CF466 /* FBCourse.swift */; };
 		3827B70829D47AF0002CF466 /* HomeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3827B70729D47AF0002CF466 /* HomeOptionCell.swift */; };
 		3827B70A29D48A3D002CF466 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3827B70929D48A3D002CF466 /* MainTabBarController.swift */; };
+		384233762A1B88CC00913910 /* responses.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 384233752A1B88CB00913910 /* responses.xlsx */; };
 		3848C75529CAE86800604245 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3848C75429CAE86800604245 /* GoogleService-Info.plist */; };
 		3848C78729CAF9E100604245 /* CheckIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C78629CAF9E100604245 /* CheckIDViewController.swift */; };
 		3848C78929CAFDB200604245 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C78829CAFDB200604245 /* String+Extension.swift */; };
 		3848C79029CB3E5A00604245 /* FBUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C78F29CB3E5A00604245 /* FBUtilities.swift */; };
 		3848C79329CB483D00604245 /* FBRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C79229CB483D00604245 /* FBRating.swift */; };
 		3848C79529CB48AD00604245 /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C79429CB48AD00604245 /* FBUser.swift */; };
+		38497C3129F7BF1B00E2C6EA /* CourseSimilarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38497C3029F7BF1B00E2C6EA /* CourseSimilarity.swift */; };
+		38497C3329F7CA8200E2C6EA /* SimilarityValueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38497C3229F7CA8200E2C6EA /* SimilarityValueListViewController.swift */; };
+		38497C3529F8242A00E2C6EA /* CoursePredictionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38497C3429F8242A00E2C6EA /* CoursePredictionError.swift */; };
+		384D499D29FC20CB00ADDE81 /* PerformanceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384D499C29FC20CB00ADDE81 /* PerformanceDetailViewController.swift */; };
 		384F68F029D9686B0082CFF8 /* CourseRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F68EF29D9686B0082CFF8 /* CourseRecommendation.swift */; };
 		384F68F229D9C39B0082CFF8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F68F129D9C39B0082CFF8 /* SettingsViewController.swift */; };
-		387D8DA629EBFF3C00E876EF /* responses.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 387D8DA429EBF93D00E876EF /* responses.xlsx */; };
 		387EBD5229A74BD400E0C6F0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EBD5129A74BD400E0C6F0 /* IntroViewController.swift */; };
 		387EBD5529A74F3500E0C6F0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EBD5429A74F3500E0C6F0 /* UIView+Extension.swift */; };
 		387EBD5F29A7575D00E0C6F0 /* RatingSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EBD5E29A7575D00E0C6F0 /* RatingSubmissionCell.swift */; };
@@ -36,6 +43,10 @@
 		388677DD29A4A2AE005776C4 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388677DC29A4A2AE005776C4 /* Student.swift */; };
 		388677DF29A4AAC5005776C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388677DE29A4AAC5005776C4 /* HomeViewController.swift */; };
 		388677E129A4B309005776C4 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388677E029A4B309005776C4 /* CourseListViewController.swift */; };
+		3887C26129F95DBF001FAE39 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887C26029F95DBF001FAE39 /* CalculatorViewController.swift */; };
+		389E4BF22A1F8EB90052B1FE /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 389E4BF12A1F8EB90052B1FE /* SwiftXLSX */; };
+		38A0C5ED29FA464400E98E80 /* PerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0C5EC29FA464400E98E80 /* PerformanceCalculatorViewController.swift */; };
+		38A0C5EF29FA4D8C00E98E80 /* UserIdInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0C5EE29FA4D8C00E98E80 /* UserIdInputCell.swift */; };
 		38A219EA29CDA9DC00D51EEF /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A219E929CDA9DC00D51EEF /* UIButton+Extension.swift */; };
 		38A219EC29CDABE300D51EEF /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A219EB29CDABE300D51EEF /* LoadingViewController.swift */; };
 		38A219EE29CDB7A600D51EEF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A219ED29CDB7A600D51EEF /* UIViewController+Extension.swift */; };
@@ -43,7 +54,8 @@
 		38ACF57E29E30BE700FBBFFA /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 38ACF57D29E30BE700FBBFFA /* SwiftMath */; };
 		38ACF58029E30C0200FBBFFA /* SystemExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACF57F29E30C0200FBBFFA /* SystemExplanationViewController.swift */; };
 		38ADA6D729CEC94C004ECCE6 /* DefaultInputSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA6D629CEC94C004ECCE6 /* DefaultInputSection.swift */; };
-		38DD056829E7A7E900C7E4A1 /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 38DD056729E7A7E900C7E4A1 /* SwiftXLSX */; };
+		38BA67C22A0750EC00322792 /* NearestNeighbors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BA67C12A0750EC00322792 /* NearestNeighbors.swift */; };
+		38BA67C42A07961300322792 /* SimilarityValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BA67C32A07961300322792 /* SimilarityValue.swift */; };
 		38E106DD298FE6B700FA4DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E106DC298FE6B700FA4DC5 /* AppDelegate.swift */; };
 		38E106DF298FE6B700FA4DC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E106DE298FE6B700FA4DC5 /* SceneDelegate.swift */; };
 		38E106E1298FE6B700FA4DC5 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E106E0298FE6B700FA4DC5 /* TestingViewController.swift */; };
@@ -87,6 +99,9 @@
 /* Begin PBXFileReference section */
 		38051C8229C71E1900FEA7A5 /* InterestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestSubmissionViewController.swift; sourceTree = "<group>"; };
 		38051C8429C7487500FEA7A5 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		381E6A6729FB73790019550B /* FBPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPerformance.swift; sourceTree = "<group>"; };
+		381E6A6929FBAF8E0019550B /* PerformanceResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceResultCell.swift; sourceTree = "<group>"; };
+		381E6A6B29FBCF660019550B /* ErrorDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetailCell.swift; sourceTree = "<group>"; };
 		3822F4E829D7E56800429987 /* RecommendationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationResultViewController.swift; sourceTree = "<group>"; };
 		3822F4EA29D7E70F00429987 /* RecommendationResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationResultCell.swift; sourceTree = "<group>"; };
 		3822F4EC29D805D600429987 /* SubmissionCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionCompleteViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +111,7 @@
 		3827B70529D4008C002CF466 /* FBCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBCourse.swift; sourceTree = "<group>"; };
 		3827B70729D47AF0002CF466 /* HomeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOptionCell.swift; sourceTree = "<group>"; };
 		3827B70929D48A3D002CF466 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		384233752A1B88CB00913910 /* responses.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = responses.xlsx; sourceTree = "<group>"; };
 		3848C75429CAE86800604245 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3848C78629CAF9E100604245 /* CheckIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIDViewController.swift; sourceTree = "<group>"; };
 		3848C78829CAFDB200604245 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -103,9 +119,12 @@
 		3848C78F29CB3E5A00604245 /* FBUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBUtilities.swift; sourceTree = "<group>"; };
 		3848C79229CB483D00604245 /* FBRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBRating.swift; sourceTree = "<group>"; };
 		3848C79429CB48AD00604245 /* FBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
+		38497C3029F7BF1B00E2C6EA /* CourseSimilarity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSimilarity.swift; sourceTree = "<group>"; };
+		38497C3229F7CA8200E2C6EA /* SimilarityValueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarityValueListViewController.swift; sourceTree = "<group>"; };
+		38497C3429F8242A00E2C6EA /* CoursePredictionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePredictionError.swift; sourceTree = "<group>"; };
+		384D499C29FC20CB00ADDE81 /* PerformanceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceDetailViewController.swift; sourceTree = "<group>"; };
 		384F68EF29D9686B0082CFF8 /* CourseRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRecommendation.swift; sourceTree = "<group>"; };
 		384F68F129D9C39B0082CFF8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		387D8DA429EBF93D00E876EF /* responses.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = responses.xlsx; sourceTree = "<group>"; };
 		387EBD5129A74BD400E0C6F0 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		387EBD5429A74F3500E0C6F0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		387EBD5E29A7575D00E0C6F0 /* RatingSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSubmissionCell.swift; sourceTree = "<group>"; };
@@ -115,12 +134,17 @@
 		388677DC29A4A2AE005776C4 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		388677DE29A4AAC5005776C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		388677E029A4B309005776C4 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
+		3887C26029F95DBF001FAE39 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		38A0C5EC29FA464400E98E80 /* PerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceCalculatorViewController.swift; sourceTree = "<group>"; };
+		38A0C5EE29FA4D8C00E98E80 /* UserIdInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdInputCell.swift; sourceTree = "<group>"; };
 		38A219E929CDA9DC00D51EEF /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		38A219EB29CDABE300D51EEF /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		38A219ED29CDB7A600D51EEF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38ABE6E829B04FE70095A87F /* SimilarityValueCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarityValueCounterViewController.swift; sourceTree = "<group>"; };
 		38ACF57F29E30C0200FBBFFA /* SystemExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExplanationViewController.swift; sourceTree = "<group>"; };
 		38ADA6D629CEC94C004ECCE6 /* DefaultInputSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInputSection.swift; sourceTree = "<group>"; };
+		38BA67C12A0750EC00322792 /* NearestNeighbors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestNeighbors.swift; sourceTree = "<group>"; };
+		38BA67C32A07961300322792 /* SimilarityValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarityValue.swift; sourceTree = "<group>"; };
 		38E106D9298FE6B700FA4DC5 /* IBCF RS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBCF RS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E106DC298FE6B700FA4DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E106DE298FE6B700FA4DC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +173,7 @@
 				38F84DDC29CE02AC001D7DDC /* FirebaseRemoteConfig in Frameworks */,
 				38F84DD629CE02AC001D7DDC /* FirebaseInAppMessaging-Beta in Frameworks */,
 				38F84DC429CDFF7A001D7DDC /* SnapKit in Frameworks */,
-				38DD056829E7A7E900C7E4A1 /* SwiftXLSX in Frameworks */,
+				389E4BF22A1F8EB90052B1FE /* SwiftXLSX in Frameworks */,
 				38F84DCC29CE02AC001D7DDC /* FirebaseAnalytics in Frameworks */,
 				38F84DCE29CE02AC001D7DDC /* FirebaseAnalyticsSwift in Frameworks */,
 				38F84DD229CE02AC001D7DDC /* FirebaseFirestore in Frameworks */,
@@ -168,6 +192,7 @@
 				3848C79229CB483D00604245 /* FBRating.swift */,
 				3848C79429CB48AD00604245 /* FBUser.swift */,
 				3827B70529D4008C002CF466 /* FBCourse.swift */,
+				381E6A6729FB73790019550B /* FBPerformance.swift */,
 			);
 			path = FB;
 			sourceTree = "<group>";
@@ -180,6 +205,10 @@
 				388677DA29A49BB7005776C4 /* Course.swift */,
 				388677DC29A4A2AE005776C4 /* Student.swift */,
 				384F68EF29D9686B0082CFF8 /* CourseRecommendation.swift */,
+				38497C3029F7BF1B00E2C6EA /* CourseSimilarity.swift */,
+				38497C3429F8242A00E2C6EA /* CoursePredictionError.swift */,
+				38BA67C12A0750EC00322792 /* NearestNeighbors.swift */,
+				38BA67C32A07961300322792 /* SimilarityValue.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -224,7 +253,7 @@
 				38E106E7298FE6B800FA4DC5 /* LaunchScreen.storyboard */,
 				3848C78C29CB01CB00604245 /* Info.plist */,
 				3848C75429CAE86800604245 /* GoogleService-Info.plist */,
-				387D8DA429EBF93D00E876EF /* responses.xlsx */,
+				384233752A1B88CB00913910 /* responses.xlsx */,
 				38E4BAFC299B73C600AD66E6 /* IBCFRecommenderSystem.swift */,
 				388677DE29A4AAC5005776C4 /* HomeViewController.swift */,
 				388677E029A4B309005776C4 /* CourseListViewController.swift */,
@@ -253,6 +282,13 @@
 				384F68F129D9C39B0082CFF8 /* SettingsViewController.swift */,
 				3825BF2629E008C60097143B /* RecommendationResultHeaderCell.swift */,
 				38ACF57F29E30C0200FBBFFA /* SystemExplanationViewController.swift */,
+				38497C3229F7CA8200E2C6EA /* SimilarityValueListViewController.swift */,
+				3887C26029F95DBF001FAE39 /* CalculatorViewController.swift */,
+				38A0C5EC29FA464400E98E80 /* PerformanceCalculatorViewController.swift */,
+				38A0C5EE29FA4D8C00E98E80 /* UserIdInputCell.swift */,
+				381E6A6929FBAF8E0019550B /* PerformanceResultCell.swift */,
+				381E6A6B29FBCF660019550B /* ErrorDetailCell.swift */,
+				384D499C29FC20CB00ADDE81 /* PerformanceDetailViewController.swift */,
 			);
 			path = "IBCF RS";
 			sourceTree = "<group>";
@@ -297,7 +333,7 @@
 				38F84DDB29CE02AC001D7DDC /* FirebaseRemoteConfig */,
 				38F84DDD29CE02AC001D7DDC /* FirebaseRemoteConfigSwift */,
 				38ACF57D29E30BE700FBBFFA /* SwiftMath */,
-				38DD056729E7A7E900C7E4A1 /* SwiftXLSX */,
+				389E4BF12A1F8EB90052B1FE /* SwiftXLSX */,
 			);
 			productName = CSVimport;
 			productReference = 38E106D9298FE6B700FA4DC5 /* IBCF RS.app */;
@@ -332,7 +368,7 @@
 				38F84DC729CDFFB3001D7DDC /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 				38F84DCA29CE02AC001D7DDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				38ACF57C29E30BE700FBBFFA /* XCRemoteSwiftPackageReference "SwiftMath" */,
-				38DD056629E7A7E900C7E4A1 /* XCRemoteSwiftPackageReference "SwiftXLSX" */,
+				389E4BF02A1F8EB90052B1FE /* XCRemoteSwiftPackageReference "SwiftXLSX" */,
 			);
 			productRefGroup = 38E106DA298FE6B700FA4DC5 /* Products */;
 			projectDirPath = "";
@@ -352,7 +388,7 @@
 				3848C75529CAE86800604245 /* GoogleService-Info.plist in Resources */,
 				38E106E6298FE6B800FA4DC5 /* Assets.xcassets in Resources */,
 				38E106F1298FE9F000FA4DC5 /* addresses.csv in Resources */,
-				387D8DA629EBFF3C00E876EF /* responses.xlsx in Resources */,
+				384233762A1B88CC00913910 /* responses.xlsx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,31 +401,40 @@
 			files = (
 				38A219EE29CDB7A600D51EEF /* UIViewController+Extension.swift in Sources */,
 				3848C78729CAF9E100604245 /* CheckIDViewController.swift in Sources */,
+				381E6A6A29FBAF8E0019550B /* PerformanceResultCell.swift in Sources */,
 				38051C8529C7487500FEA7A5 /* UILabel+Extension.swift in Sources */,
 				387EBD5529A74F3500E0C6F0 /* UIView+Extension.swift in Sources */,
 				3848C78929CAFDB200604245 /* String+Extension.swift in Sources */,
 				3848C79029CB3E5A00604245 /* FBUtilities.swift in Sources */,
 				382659DB29D0448A0070DE1E /* DefaultsUtilities.swift in Sources */,
+				38A0C5EF29FA4D8C00E98E80 /* UserIdInputCell.swift in Sources */,
 				384F68F229D9C39B0082CFF8 /* SettingsViewController.swift in Sources */,
 				388677DB29A49BB7005776C4 /* Course.swift in Sources */,
 				3827B70629D4008C002CF466 /* FBCourse.swift in Sources */,
+				38BA67C22A0750EC00322792 /* NearestNeighbors.swift in Sources */,
 				38E4BAFD299B73C600AD66E6 /* IBCFRecommenderSystem.swift in Sources */,
 				38E106E1298FE6B700FA4DC5 /* TestingViewController.swift in Sources */,
+				38497C3329F7CA8200E2C6EA /* SimilarityValueListViewController.swift in Sources */,
 				3825BF2729E008C60097143B /* RecommendationResultHeaderCell.swift in Sources */,
 				384F68F029D9686B0082CFF8 /* CourseRecommendation.swift in Sources */,
+				381E6A6C29FBCF660019550B /* ErrorDetailCell.swift in Sources */,
 				38A219EA29CDA9DC00D51EEF /* UIButton+Extension.swift in Sources */,
 				3848C79329CB483D00604245 /* FBRating.swift in Sources */,
 				38ADA6D729CEC94C004ECCE6 /* DefaultInputSection.swift in Sources */,
 				3822F4E929D7E56800429987 /* RecommendationResultViewController.swift in Sources */,
+				3887C26129F95DBF001FAE39 /* CalculatorViewController.swift in Sources */,
 				3822F4ED29D805D600429987 /* SubmissionCompleteViewController.swift in Sources */,
+				38A0C5ED29FA464400E98E80 /* PerformanceCalculatorViewController.swift in Sources */,
 				38ABE6E929B04FE70095A87F /* SimilarityValueCounterViewController.swift in Sources */,
 				38A219EC29CDABE300D51EEF /* LoadingViewController.swift in Sources */,
 				38F84DE629CE178D001D7DDC /* DefaultTextField.swift in Sources */,
 				3827B70A29D48A3D002CF466 /* MainTabBarController.swift in Sources */,
 				388677DF29A4AAC5005776C4 /* HomeViewController.swift in Sources */,
 				38E4BAFF299B73F700AD66E6 /* Rating.swift in Sources */,
+				38497C3129F7BF1B00E2C6EA /* CourseSimilarity.swift in Sources */,
 				387EBD5229A74BD400E0C6F0 /* IntroViewController.swift in Sources */,
 				38E106DD298FE6B700FA4DC5 /* AppDelegate.swift in Sources */,
+				381E6A6829FB73790019550B /* FBPerformance.swift in Sources */,
 				3848C79529CB48AD00604245 /* FBUser.swift in Sources */,
 				388677DD29A4A2AE005776C4 /* Student.swift in Sources */,
 				38FF395D29CC31F8001A6EF8 /* XLSXUtilities.swift in Sources */,
@@ -398,10 +443,13 @@
 				387EBD6329A762C700E0C6F0 /* RatingSubmissionViewController.swift in Sources */,
 				38ACF58029E30C0200FBBFFA /* SystemExplanationViewController.swift in Sources */,
 				38E106DF298FE6B700FA4DC5 /* SceneDelegate.swift in Sources */,
+				38BA67C42A07961300322792 /* SimilarityValue.swift in Sources */,
 				38F84DE429CE116D001D7DDC /* UIStackView+Extension.swift in Sources */,
+				38497C3529F8242A00E2C6EA /* CoursePredictionError.swift in Sources */,
 				3822F4EB29D7E70F00429987 /* RecommendationResultCell.swift in Sources */,
 				38F84DE229CE0CD2001D7DDC /* RegisterViewController.swift in Sources */,
 				387EBD5F29A7575D00E0C6F0 /* RatingSubmissionCell.swift in Sources */,
+				384D499D29FC20CB00ADDE81 /* PerformanceDetailViewController.swift in Sources */,
 				38FF395F29CC3A7B001A6EF8 /* XLSXTestViewController.swift in Sources */,
 				3827B70829D47AF0002CF466 /* HomeOptionCell.swift in Sources */,
 				388677E129A4B309005776C4 /* CourseListViewController.swift in Sources */,
@@ -619,20 +667,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		389E4BF02A1F8EB90052B1FE /* XCRemoteSwiftPackageReference "SwiftXLSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/3973770/SwiftXLSX";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		38ACF57C29E30BE700FBBFFA /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
-			};
-		};
-		38DD056629E7A7E900C7E4A1 /* XCRemoteSwiftPackageReference "SwiftXLSX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/3973770/SwiftXLSX";
-			requirement = {
-				branch = main;
-				kind = branch;
 			};
 		};
 		38F84DC229CDFF7A001D7DDC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -662,15 +710,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		389E4BF12A1F8EB90052B1FE /* SwiftXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389E4BF02A1F8EB90052B1FE /* XCRemoteSwiftPackageReference "SwiftXLSX" */;
+			productName = SwiftXLSX;
+		};
 		38ACF57D29E30BE700FBBFFA /* SwiftMath */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 38ACF57C29E30BE700FBBFFA /* XCRemoteSwiftPackageReference "SwiftMath" */;
 			productName = SwiftMath;
-		};
-		38DD056729E7A7E900C7E4A1 /* SwiftXLSX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38DD056629E7A7E900C7E4A1 /* XCRemoteSwiftPackageReference "SwiftXLSX" */;
-			productName = SwiftXLSX;
 		};
 		38F84DC329CDFF7A001D7DDC /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

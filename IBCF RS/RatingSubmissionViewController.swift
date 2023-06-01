@@ -242,20 +242,22 @@ private extension RatingSubmissionViewController {
             guard
                 let ratings = ratings,
                 let accumulatedRatings = self.accumulatedRatings,
-                let user = DefaultUtilities.shared.getCurrentUser()
+                let currentUser = DefaultUtilities.shared.getCurrentUser()
             else {
                 self.navigationController?.dismiss(animated: false)
                 return
             }
             
+            print("accumulated ratings: \(accumulatedRatings)")
             let recommenderSystem = IBCFRecommenderSystem(ratings: ratings + accumulatedRatings)
             let courseIds = FBCourse.allCourses()
                 .filter({ $0.newCurriculumSemesterAvailability ?? 0 > 4 && $0.areaOfInterest != nil })
                 .map({ $0.id ?? "" })
-            recommenderSystem.getRecommendations(userId: user.id ?? "", itemIds: courseIds) { recommendations in
+            recommenderSystem.getRecommendations(userId: currentUser.id ?? "", itemIds: courseIds, numberOfK: 28) { recommendations in
                 self.navigationController?.dismiss(animated: false, completion: {
                     let resultViewController = RecommendationResultViewController()
                     resultViewController.recommendedCourses = recommendations
+                    resultViewController.shownRecommendedCourses = recommendations
                     self.navigationController?.pushViewController(resultViewController, animated: true)
                 })
             }

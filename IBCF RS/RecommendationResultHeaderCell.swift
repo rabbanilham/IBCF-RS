@@ -45,7 +45,7 @@ final class RecommendationResultHeaderCell: UITableViewCell {
         label.font = .systemFont(ofSize: 24, weight: .bold)
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = "Berhasil!"
+        label.text = "Ini Rekomendasi Untukmu!"
         
         return label
     }()
@@ -53,7 +53,7 @@ final class RecommendationResultHeaderCell: UITableViewCell {
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Udah berhasil, jadi bisa ditampilin buat rekomendasinya hehe trimakazi sudah mencoba"
+        label.text = "Berikut adalah semua mata kuliah pilihan serta prediksi nilai ratingnya, diurutkan dari prediksi nilai rating terbesar sampai terkecil. Nilai prediksi rating berkisar antara 1 sampai 5. Semakin besar prediksi nilai rating, semakin direkomendasikan mata kuliah tersebut."
         label.setLineSpacing(to: 5, alignment: .center)
         
         return label

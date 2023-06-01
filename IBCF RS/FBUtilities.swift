@@ -62,7 +62,7 @@ final class FBUtilities {
         _ completion: @escaping (Error?) -> Void
     ) {
         do {
-            try database.collection("user").document(user.id ?? "0").setData(from: user.self, merge: true, completion: { error in
+            try database.collection("user").document(user.id ?? "0").setData(from: user.self, merge: false, completion: { error in
                 if let error = error {
                     completion(error)
                 } else {
@@ -95,3 +95,4 @@ final class FBUtilities {
         }
     }
 }
+

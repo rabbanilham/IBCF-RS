@@ -8,6 +8,12 @@
 import UIKit
 
 final class RecommendationResultViewController: UIViewController {
+    private lazy var filterBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"))
+        
+        return button
+    }()
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
@@ -47,17 +53,22 @@ final class RecommendationResultViewController: UIViewController {
     }()
     
     var recommendedCourses: [CourseRecommendation]?
-    var values: [Double] = [1, 0.5, 0.3, 0.2, 0.01]
+    var shownRecommendedCourses: [CourseRecommendation]?
+    private var naturalCoursesId = [String?]()
+    private var appliedCoursesId = [String?]()
+    private var filterOptions = ["Tampilkan Semua", "Tampilkan Hanya Mata Kuliah Peminatan Murni", "Tampilkan Hanya Mata Kuliah Peminatan Terapan"]
+    private var filterChosen = "Tampilkan Semua"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeUI()
+        makeFilterButtonOptions()
     }
 }
 
 extension RecommendationResultViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recommendedCourses?.count ?? 0
+        return shownRecommendedCourses?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,9 +83,9 @@ extension RecommendationResultViewController: UITableViewDelegate, UITableViewDa
             withIdentifier: "\(RecommendationResultCell.self)",
             for: indexPath
         ) as? RecommendationResultCell,
-              let recommendedCourses = recommendedCourses
+              let shownRecommendedCourses = shownRecommendedCourses
         else { return UITableViewCell() }
-        let course = recommendedCourses[row]
+        let course = shownRecommendedCourses[row]
         cell.setContent(rank: row, courseId: "\(course.courseId)", predictionValue: course.predictionValue)
         
         return cell
@@ -84,6 +95,7 @@ extension RecommendationResultViewController: UITableViewDelegate, UITableViewDa
 private extension RecommendationResultViewController {
     func makeUI() {
         navigationItem.hidesBackButton = true
+        navigationItem.rightBarButtonItem = filterBarButton
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "Rekomendasi Mata Kuliah Pilihan"
         
@@ -101,9 +113,47 @@ private extension RecommendationResultViewController {
             make.top.equalTo(view.layoutMarginsGuide.snp.bottom).offset(-64)
         }
         recommendedCourses?.sort(by: { $0.predictionValue > $1.predictionValue })
+        shownRecommendedCourses?.sort(by: { $0.predictionValue > $1.predictionValue })
+    }
+    
+    func setupCourses() {
+        naturalCoursesId = FBCourse.allCourses().filter({ $0.areaOfInterest == .natural || $0.areaOfInterest == .both }).map({ $0.id })
+        appliedCoursesId = FBCourse.allCourses().filter({ $0.areaOfInterest == .applied || $0.areaOfInterest == .both }).map({ $0.id })
     }
     
     @objc func didTapDismissButton() {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func makeFilterButtonOptions() {
+        var children = [UIAction]()
+        
+        for option in filterOptions {
+            let choiceMenu = UIAction(
+                title: option,
+                image: option == filterChosen ? UIImage(systemName: "checkmark") : nil
+            ) { [weak self] _ in
+                guard let self = self else { return }
+                self.filterChosen = option
+                switch option {
+                case "Tampilkan Semua":
+                    self.shownRecommendedCourses = self.recommendedCourses?.sorted(by: { $0.predictionValue > $1.predictionValue })
+                    
+                case "Tampilkan Hanya Mata Kuliah Peminatan Murni":
+                    self.shownRecommendedCourses = self.recommendedCourses?.filter({ self.naturalCoursesId.contains($0.courseId) }).sorted(by: { $0.predictionValue > $1.predictionValue })
+                    
+                case "Tampilkan Hanya Mata Kuliah Peminatan Terapan":
+                    self.shownRecommendedCourses = self.recommendedCourses?.filter({ self.appliedCoursesId.contains($0.courseId) }).sorted(by: { $0.predictionValue > $1.predictionValue })
+                    
+                default: break
+                }
+                self.tableView.reloadData()
+//                self.main
+            }
+            choiceMenu.image = option == filterChosen ? UIImage(systemName: "checkmark") : nil
+            children.append(choiceMenu)
+        }
+        let menu = UIMenu(options: .displayInline, children: children)
+        filterBarButton.menu = menu
     }
 }

@@ -11,7 +11,9 @@ final class SettingsViewController: UITableViewController {
     private let settingsLabel = [
         [
             "Tampilkan nilai prediksi rating pada mata kuliah untuk semester 5 ke atas",
-            "Update Data"
+            "Update Data",
+            "Hitung Nilai Kemiripan",
+            "Hitung Performa Sistem Rekomendasi"
         ],
         [
             "Tentang Aplikasi Ini"
@@ -21,7 +23,9 @@ final class SettingsViewController: UITableViewController {
     private let settingsImages = [
         [
             UIImage(systemName: "checkmark.seal"),
-            UIImage(systemName: "arrow.up.doc")
+            UIImage(systemName: "arrow.up.doc"),
+            UIImage(systemName: "laptopcomputer"),
+            UIImage(systemName: "gauge.medium")
         ],
         [
             UIImage(systemName: "info.circle")
@@ -77,6 +81,14 @@ final class SettingsViewController: UITableViewController {
             switch row{
             case 1 :
                 let viewController = XLSXTestViewController(style: .insetGrouped)
+                navigationController?.pushViewController(viewController, animated: true)
+                
+            case 2:
+                let viewController = CalculatorViewController()
+                navigationController?.pushViewController(viewController, animated: true)
+                
+            case 3:
+                let viewController = PerformanceCalculatorViewController()
                 navigationController?.pushViewController(viewController, animated: true)
                 
             default: break

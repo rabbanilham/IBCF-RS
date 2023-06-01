@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FBRating: Codable {
+struct FBRating: Codable, Equatable {
     var userId: String?
     var itemId: String?
     var value: Double?
